@@ -13,6 +13,7 @@ def home():
         <li><a href="/about">About Nick</a></li>
         <li><a href="/resume">Resume</a></li>
         <li><a href="/skills">Cybersecurity Skills</a></li>
+        <li><a href="/projects">Projects</a></li>
     </ul>
     """
 
@@ -48,5 +49,18 @@ def skills():
     </ul>
     <p><a href="/">Back Home</a></p>
     """
+
+@app.route("/projects")
+def projects():
+    return """
+    <h1>Projects</h1>
+
+    <h2>CloudCover</h2>
+    <p>Visualizes top attacking IPs from Microsoft Sentinel KQL output.</p>
+
+    <p><a href="/">Back Home</a></p>
+    """
+
+
 
 app.run(host="0.0.0.0", port=5000)
